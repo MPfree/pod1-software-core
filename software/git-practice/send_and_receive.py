@@ -38,6 +38,9 @@ def sender(chanel: str):
     message.name = "Rama"
     message.value = "Rama is testing"
     _lcm.publish(chanel, message.encode())
+    message.name = "Tom"
+    message.value = "Tom is changing value"
+    _lcm.publish(chanel, message.encode())
 
 
 def listener(channel, data):
